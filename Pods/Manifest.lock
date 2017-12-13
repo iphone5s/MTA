@@ -1,0 +1,20 @@
+PODS:
+  - CocoaAsyncSocket (7.6.2)
+  - GBDeviceInfo (5.1.0):
+    - GBDeviceInfo/Core (= 5.1.0)
+  - GBDeviceInfo/Core (5.1.0)
+  - GZIP (1.2.1)
+
+DEPENDENCIES:
+  - CocoaAsyncSocket
+  - GBDeviceInfo
+  - GZIP
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 3541e024f48c54b251638ef72d51dd42808de932
+  GBDeviceInfo: 8e43440ae1264d9a79beea81800363cf192ce322
+  GZIP: 7ee835f989fb3c6ea79005fc90b8fa6af710a70d
+
+PODFILE CHECKSUM: e53ad8269d3ae2b35c82b98abeedee1fd46ade12
+
+COCOAPODS: 1.3.1

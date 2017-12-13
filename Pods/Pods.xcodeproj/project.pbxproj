@@ -1,0 +1,831 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D868FA203F4E25F88492F46372B9944 /* GBDeviceInfoInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = FD27D9DBA3E936548BBA34625620AD15 /* GBDeviceInfoInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		147D07B63571F99410200D4AC81360AD /* GBDeviceInfoTypes_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE34BE1177E40F5EE240312A69F16F /* GBDeviceInfoTypes_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A22C01C05A51E5D414F55FF52D09B16 /* GBDeviceInfo_Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BA7B6B96CBEF243B1D18636506CF27A /* GBDeviceInfo_Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		205A60EA2658A4B90D8E59F1A38892DE /* GBDeviceInfo_Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E55BFF4DF1FB071B5DF8FDEFFF4952 /* GBDeviceInfo_Common.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		2145C0C208EE86687E79AC21C3118E6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6207C9067704E25CC2D3DDCD79D53055 /* Cocoa.framework */; };
+		241E71118B10D7807D5E964D6D9D0022 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 35D2E04E0BE1977ABF5A56DA15896CB4 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24626B3DCE4FF16D8663820B6704EFAB /* GBDeviceInfoTypes_Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 782FF29E4E65AC83914E8B84764806ED /* GBDeviceInfoTypes_Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		305B1478BF6997FBB91CEC7CC4B66545 /* NSData+GZIP.m in Sources */ = {isa = PBXBuildFile; fileRef = 51DEEB62E2D517CEAFA6800EBA469F0E /* NSData+GZIP.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		368B750EC49A915C7369251709E49968 /* GBDeviceInfo_OSX.h in Headers */ = {isa = PBXBuildFile; fileRef = B6BFC912D0B1B04E322F7EE46E769478 /* GBDeviceInfo_OSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40042D23E3C5B09ED05246B54E09D935 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F59FF0CE131AD99ADEEA39EFA48EC8 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		4894370503E325421F9E2FD4932010D8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6207C9067704E25CC2D3DDCD79D53055 /* Cocoa.framework */; };
+		58DC90266C5A8717C2AB586AE000823C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6207C9067704E25CC2D3DDCD79D53055 /* Cocoa.framework */; };
+		714D74BBAC857D21E4BE628C6E296BC5 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F1796CB1661091FB0C7506BDF1279C7 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F3F2F1F8A22EC18CD40A1A51AC5EA52 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05D32CEB7D7A940CFE7A3ECE2D7EBDC3 /* Foundation.framework */; };
+		8007CC6BDF8873F3736008C68495ECB8 /* GBDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 70D4039828BAB7F57D70A0A93423BBEF /* GBDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		803B275E16F0F8F227A858C4108DAAA9 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74786B4B9D964CAA8BE94ECED36C841C /* CoreServices.framework */; };
+		841604C20D5D32372241F0A1A8537CF8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148A7F23755122C4174B350A2E85C07 /* Security.framework */; };
+		ABC6717E8D915376E89BC88749877AF2 /* GZIP-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AFB2ECAB4E495FDE4CFE306EBBF653 /* GZIP-dummy.m */; };
+		B2FBE21F6B68F74346AAFC1663540C47 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74786B4B9D964CAA8BE94ECED36C841C /* CoreServices.framework */; };
+		B44C45FAFE8FCBABF1DF3129A9D106E3 /* GBDeviceInfo_OSX.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC10B0D5A47098DE73DE2D84133E7C7 /* GBDeviceInfo_OSX.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		BFB98D69D698BCD43E69D0806CE16794 /* NSData+GZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 0AD9B5A6AE0A2058E1C41AB0B77A3334 /* NSData+GZIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D929F6E068CA507BE5C5F45C5C173FC0 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6FFEF28553C1485B771132704F74CF /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		E1D3558E80197D62084FD585403BAFA3 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DA947ADBD358675AA1144D8390908F6E /* CocoaAsyncSocket-dummy.m */; };
+		E6967D18AD64F4EE56DB56CB81ECD056 /* GBDeviceInfo_Common.h in Headers */ = {isa = PBXBuildFile; fileRef = 54820BEA69F71CBCBDCE89F5AA39C978 /* GBDeviceInfo_Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8ACF85D715BB7E710420DBE160B54E4 /* Pods-MTA-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A2FC8348C5E178967E7F37ED705719 /* Pods-MTA-dummy.m */; };
+		EC82D6E5314C88DC7A3618C52B773693 /* GZIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 170DD944FD4CC9719A74AFD21B26A265 /* GZIP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F49C6AACC3FB720D9285DE267C1F855B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6207C9067704E25CC2D3DDCD79D53055 /* Cocoa.framework */; };
+		FF115F6CCE5994BAA44DDB086E841F47 /* GBDeviceInfo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 447CB9B87C675FFDFA6F6C38D2398965 /* GBDeviceInfo-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		203D4E39F1C6EE3F5852D1BA5DD570DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 274DC44D2B42DBB44A3634CEF4C3B3CB;
+			remoteInfo = GBDeviceInfo;
+		};
+		6A3AADE79725D94DA5A880C9AA657C34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A07BB0F2F4F1B91893B1C6FBF5370AD;
+			remoteInfo = GZIP;
+		};
+		E73C30C8954C492607D5A65F3F0B2242 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23D7DA26C40DEA0CBB49A7825C7CD4F1;
+			remoteInfo = CocoaAsyncSocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05D32CEB7D7A940CFE7A3ECE2D7EBDC3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0AD9B5A6AE0A2058E1C41AB0B77A3334 /* NSData+GZIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+GZIP.h"; path = "GZIP/NSData+GZIP.h"; sourceTree = "<group>"; };
+		170DD944FD4CC9719A74AFD21B26A265 /* GZIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GZIP.h; path = GZIP/GZIP.h; sourceTree = "<group>"; };
+		1C642C92C33F12EC7B51293AFAFB7234 /* Pods-MTA-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTA-resources.sh"; sourceTree = "<group>"; };
+		1CC10B0D5A47098DE73DE2D84133E7C7 /* GBDeviceInfo_OSX.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBDeviceInfo_OSX.m; path = GBDeviceInfo/GBDeviceInfo_OSX.m; sourceTree = "<group>"; };
+		24DE34BE1177E40F5EE240312A69F16F /* GBDeviceInfoTypes_OSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoTypes_OSX.h; path = GBDeviceInfo/GBDeviceInfoTypes_OSX.h; sourceTree = "<group>"; };
+		2C2D5F742A259AC12FA8BC669BB4B8ED /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
+		31A2FC8348C5E178967E7F37ED705719 /* Pods-MTA-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MTA-dummy.m"; sourceTree = "<group>"; };
+		3302AAD0728BFDE7B5920F5C441DF808 /* libGBDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGBDeviceInfo.a; path = libGBDeviceInfo.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		35D2E04E0BE1977ABF5A56DA15896CB4 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		41AFB2ECAB4E495FDE4CFE306EBBF653 /* GZIP-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GZIP-dummy.m"; sourceTree = "<group>"; };
+		447CB9B87C675FFDFA6F6C38D2398965 /* GBDeviceInfo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GBDeviceInfo-dummy.m"; sourceTree = "<group>"; };
+		4A42BEEB17C4B8240895FEE3F6057D2F /* Pods-MTA-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MTA-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4F1796CB1661091FB0C7506BDF1279C7 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		5186597560C9D1BEEF0ADDB79A7365BF /* GBDeviceInfo.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GBDeviceInfo.xcconfig; sourceTree = "<group>"; };
+		51DEEB62E2D517CEAFA6800EBA469F0E /* NSData+GZIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+GZIP.m"; path = "GZIP/NSData+GZIP.m"; sourceTree = "<group>"; };
+		54820BEA69F71CBCBDCE89F5AA39C978 /* GBDeviceInfo_Common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo_Common.h; path = GBDeviceInfo/GBDeviceInfo_Common.h; sourceTree = "<group>"; };
+		5BA7B6B96CBEF243B1D18636506CF27A /* GBDeviceInfo_Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo_Subclass.h; path = GBDeviceInfo/GBDeviceInfo_Subclass.h; sourceTree = "<group>"; };
+		607EDC941E00C1A67048BA4F0A963D42 /* Pods-MTA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTA.release.xcconfig"; sourceTree = "<group>"; };
+		6207C9067704E25CC2D3DDCD79D53055 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		6D6FFEF28553C1485B771132704F74CF /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		70D4039828BAB7F57D70A0A93423BBEF /* GBDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo.h; path = GBDeviceInfo/GBDeviceInfo.h; sourceTree = "<group>"; };
+		74786B4B9D964CAA8BE94ECED36C841C /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		77E55BFF4DF1FB071B5DF8FDEFFF4952 /* GBDeviceInfo_Common.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GBDeviceInfo_Common.m; path = GBDeviceInfo/GBDeviceInfo_Common.m; sourceTree = "<group>"; };
+		782FF29E4E65AC83914E8B84764806ED /* GBDeviceInfoTypes_Common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoTypes_Common.h; path = GBDeviceInfo/GBDeviceInfoTypes_Common.h; sourceTree = "<group>"; };
+		91EBC49AEC784DCFD84198104E8AB075 /* Pods-MTA-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MTA-acknowledgements.plist"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A30B7429A70858B92D9BE4618DACEA4E /* GZIP.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GZIP.xcconfig; sourceTree = "<group>"; };
+		B148A7F23755122C4174B350A2E85C07 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		B6BFC912D0B1B04E322F7EE46E769478 /* GBDeviceInfo_OSX.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfo_OSX.h; path = GBDeviceInfo/GBDeviceInfo_OSX.h; sourceTree = "<group>"; };
+		B799C6BA4C6DC6B37B575A4824468E14 /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libCocoaAsyncSocket.a; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBBFFD7870D2E049EF21E43DC116A690 /* GZIP-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GZIP-prefix.pch"; sourceTree = "<group>"; };
+		BCA7AF3097F143F436400BA8A940C2ED /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		BE6FB2F2F6E3FD13D2BFEE86D4E030BF /* libGZIP.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libGZIP.a; path = libGZIP.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C799A05731392ED6144695D385837676 /* GBDeviceInfo-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GBDeviceInfo-prefix.pch"; sourceTree = "<group>"; };
+		D147AA7F03344AE67E7517BEB0C2D2FE /* Pods-MTA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MTA.debug.xcconfig"; sourceTree = "<group>"; };
+		D3F59FF0CE131AD99ADEEA39EFA48EC8 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		DA947ADBD358675AA1144D8390908F6E /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		DE76C2028A1B71E4DB2CFE152E1C99DF /* Pods-MTA-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MTA-frameworks.sh"; sourceTree = "<group>"; };
+		E78F26342F5ED3621101827C3B2BDB7E /* libPods-MTA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MTA.a"; path = "libPods-MTA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD27D9DBA3E936548BBA34625620AD15 /* GBDeviceInfoInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GBDeviceInfoInterface.h; path = GBDeviceInfo/GBDeviceInfoInterface.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A224D7205051B8B53A2755FAF6F3505 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49C6AACC3FB720D9285DE267C1F855B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18DAF201BE49A037CD296911FB0162DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4894370503E325421F9E2FD4932010D8 /* Cocoa.framework in Frameworks */,
+				B2FBE21F6B68F74346AAFC1663540C47 /* CoreServices.framework in Frameworks */,
+				841604C20D5D32372241F0A1A8537CF8 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4FBE0EE5FA8EF8322B889FE99CA6CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2145C0C208EE86687E79AC21C3118E6B /* Cocoa.framework in Frameworks */,
+				803B275E16F0F8F227A858C4108DAAA9 /* CoreServices.framework in Frameworks */,
+				7F3F2F1F8A22EC18CD40A1A51AC5EA52 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF9A4F96ED21E5BBBA7F62016A94CC0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58DC90266C5A8717C2AB586AE000823C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0512072F7BE4246C590552CC0713A067 /* Pods-MTA */ = {
+			isa = PBXGroup;
+			children = (
+				4A42BEEB17C4B8240895FEE3F6057D2F /* Pods-MTA-acknowledgements.markdown */,
+				91EBC49AEC784DCFD84198104E8AB075 /* Pods-MTA-acknowledgements.plist */,
+				31A2FC8348C5E178967E7F37ED705719 /* Pods-MTA-dummy.m */,
+				DE76C2028A1B71E4DB2CFE152E1C99DF /* Pods-MTA-frameworks.sh */,
+				1C642C92C33F12EC7B51293AFAFB7234 /* Pods-MTA-resources.sh */,
+				D147AA7F03344AE67E7517BEB0C2D2FE /* Pods-MTA.debug.xcconfig */,
+				607EDC941E00C1A67048BA4F0A963D42 /* Pods-MTA.release.xcconfig */,
+			);
+			name = "Pods-MTA";
+			path = "Target Support Files/Pods-MTA";
+			sourceTree = "<group>";
+		};
+		2B3F5B284DABC648B411700001EDBBC5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5186597560C9D1BEEF0ADDB79A7365BF /* GBDeviceInfo.xcconfig */,
+				447CB9B87C675FFDFA6F6C38D2398965 /* GBDeviceInfo-dummy.m */,
+				C799A05731392ED6144695D385837676 /* GBDeviceInfo-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GBDeviceInfo";
+			sourceTree = "<group>";
+		};
+		4EBFA86337C199BACEFBE663AAEB730E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				70D4039828BAB7F57D70A0A93423BBEF /* GBDeviceInfo.h */,
+				54820BEA69F71CBCBDCE89F5AA39C978 /* GBDeviceInfo_Common.h */,
+				77E55BFF4DF1FB071B5DF8FDEFFF4952 /* GBDeviceInfo_Common.m */,
+				B6BFC912D0B1B04E322F7EE46E769478 /* GBDeviceInfo_OSX.h */,
+				1CC10B0D5A47098DE73DE2D84133E7C7 /* GBDeviceInfo_OSX.m */,
+				5BA7B6B96CBEF243B1D18636506CF27A /* GBDeviceInfo_Subclass.h */,
+				FD27D9DBA3E936548BBA34625620AD15 /* GBDeviceInfoInterface.h */,
+				782FF29E4E65AC83914E8B84764806ED /* GBDeviceInfoTypes_Common.h */,
+				24DE34BE1177E40F5EE240312A69F16F /* GBDeviceInfoTypes_OSX.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		69950829F43556A783C78A6998710133 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A30B7429A70858B92D9BE4618DACEA4E /* GZIP.xcconfig */,
+				41AFB2ECAB4E495FDE4CFE306EBBF653 /* GZIP-dummy.m */,
+				BBBFFD7870D2E049EF21E43DC116A690 /* GZIP-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/GZIP";
+			sourceTree = "<group>";
+		};
+		6A1BF47C5D7D726EDD10D641F451323E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B799C6BA4C6DC6B37B575A4824468E14 /* libCocoaAsyncSocket.a */,
+				3302AAD0728BFDE7B5920F5C441DF808 /* libGBDeviceInfo.a */,
+				BE6FB2F2F6E3FD13D2BFEE86D4E030BF /* libGZIP.a */,
+				E78F26342F5ED3621101827C3B2BDB7E /* libPods-MTA.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B12355B7BA5AA376F976515AA01243A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C2D5F742A259AC12FA8BC669BB4B8ED /* CocoaAsyncSocket.xcconfig */,
+				DA947ADBD358675AA1144D8390908F6E /* CocoaAsyncSocket-dummy.m */,
+				BCA7AF3097F143F436400BA8A940C2ED /* CocoaAsyncSocket-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CocoaAsyncSocket";
+			sourceTree = "<group>";
+		};
+		6B50D40984D2F940079788054C64DC63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F19EC61C75104EF3B12B64F15C4786DF /* CocoaAsyncSocket */,
+				AFE14B2DC4BF0CCF409F02B96698AA8C /* GBDeviceInfo */,
+				6FACCC8C1830844105F76AE3FD0501E2 /* GZIP */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6FACCC8C1830844105F76AE3FD0501E2 /* GZIP */ = {
+			isa = PBXGroup;
+			children = (
+				170DD944FD4CC9719A74AFD21B26A265 /* GZIP.h */,
+				0AD9B5A6AE0A2058E1C41AB0B77A3334 /* NSData+GZIP.h */,
+				51DEEB62E2D517CEAFA6800EBA469F0E /* NSData+GZIP.m */,
+				69950829F43556A783C78A6998710133 /* Support Files */,
+			);
+			name = GZIP;
+			path = GZIP;
+			sourceTree = "<group>";
+		};
+		77EAB7C0FC6CE6BF3BAD7D79DB34F7B3 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				6207C9067704E25CC2D3DDCD79D53055 /* Cocoa.framework */,
+				74786B4B9D964CAA8BE94ECED36C841C /* CoreServices.framework */,
+				05D32CEB7D7A940CFE7A3ECE2D7EBDC3 /* Foundation.framework */,
+				B148A7F23755122C4174B350A2E85C07 /* Security.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				CD75D5B60FCA72FBF7F9C770460B2C26 /* Frameworks */,
+				6B50D40984D2F940079788054C64DC63 /* Pods */,
+				6A1BF47C5D7D726EDD10D641F451323E /* Products */,
+				C97006D6E7B0D1645D3D5DB01FEDF5BC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AFE14B2DC4BF0CCF409F02B96698AA8C /* GBDeviceInfo */ = {
+			isa = PBXGroup;
+			children = (
+				4EBFA86337C199BACEFBE663AAEB730E /* Core */,
+				2B3F5B284DABC648B411700001EDBBC5 /* Support Files */,
+			);
+			name = GBDeviceInfo;
+			path = GBDeviceInfo;
+			sourceTree = "<group>";
+		};
+		C97006D6E7B0D1645D3D5DB01FEDF5BC /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0512072F7BE4246C590552CC0713A067 /* Pods-MTA */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CD75D5B60FCA72FBF7F9C770460B2C26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77EAB7C0FC6CE6BF3BAD7D79DB34F7B3 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F19EC61C75104EF3B12B64F15C4786DF /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				35D2E04E0BE1977ABF5A56DA15896CB4 /* GCDAsyncSocket.h */,
+				6D6FFEF28553C1485B771132704F74CF /* GCDAsyncSocket.m */,
+				4F1796CB1661091FB0C7506BDF1279C7 /* GCDAsyncUdpSocket.h */,
+				D3F59FF0CE131AD99ADEEA39EFA48EC8 /* GCDAsyncUdpSocket.m */,
+				6B12355B7BA5AA376F976515AA01243A /* Support Files */,
+			);
+			name = CocoaAsyncSocket;
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		165848F5DE5F442CA17F98266BF22055 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				241E71118B10D7807D5E964D6D9D0022 /* GCDAsyncSocket.h in Headers */,
+				714D74BBAC857D21E4BE628C6E296BC5 /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16878F62121F1EA5027205929DD042E3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8007CC6BDF8873F3736008C68495ECB8 /* GBDeviceInfo.h in Headers */,
+				E6967D18AD64F4EE56DB56CB81ECD056 /* GBDeviceInfo_Common.h in Headers */,
+				368B750EC49A915C7369251709E49968 /* GBDeviceInfo_OSX.h in Headers */,
+				1A22C01C05A51E5D414F55FF52D09B16 /* GBDeviceInfo_Subclass.h in Headers */,
+				0D868FA203F4E25F88492F46372B9944 /* GBDeviceInfoInterface.h in Headers */,
+				24626B3DCE4FF16D8663820B6704EFAB /* GBDeviceInfoTypes_Common.h in Headers */,
+				147D07B63571F99410200D4AC81360AD /* GBDeviceInfoTypes_OSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C8A9FFFFE9B9681FBD4DB5E158B1A6B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC82D6E5314C88DC7A3618C52B773693 /* GZIP.h in Headers */,
+				BFB98D69D698BCD43E69D0806CE16794 /* NSData+GZIP.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23D7DA26C40DEA0CBB49A7825C7CD4F1 /* CocoaAsyncSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E720E377F01A6230162E58B96EA78A5 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
+			buildPhases = (
+				52BF12F835BDA1CD2787DA3488AC6DA7 /* Sources */,
+				18DAF201BE49A037CD296911FB0162DC /* Frameworks */,
+				165848F5DE5F442CA17F98266BF22055 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaAsyncSocket;
+			productName = CocoaAsyncSocket;
+			productReference = B799C6BA4C6DC6B37B575A4824468E14 /* libCocoaAsyncSocket.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		274DC44D2B42DBB44A3634CEF4C3B3CB /* GBDeviceInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 68F1C0D9370ED14D4D3E7108D86B15C5 /* Build configuration list for PBXNativeTarget "GBDeviceInfo" */;
+			buildPhases = (
+				4E0104DB40356C893EF3EBDC78625B17 /* Sources */,
+				3E4FBE0EE5FA8EF8322B889FE99CA6CE /* Frameworks */,
+				16878F62121F1EA5027205929DD042E3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GBDeviceInfo;
+			productName = GBDeviceInfo;
+			productReference = 3302AAD0728BFDE7B5920F5C441DF808 /* libGBDeviceInfo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7325E9131F943BA25805C9AC5C03582F /* Pods-MTA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 713AD03B42F37B48FD09B58FF59E56A2 /* Build configuration list for PBXNativeTarget "Pods-MTA" */;
+			buildPhases = (
+				6BDED60A3CC6651C2CCC31F71FADCA29 /* Sources */,
+				0A224D7205051B8B53A2755FAF6F3505 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5EE5158F7F1DE717DD3D1AD0508041C /* PBXTargetDependency */,
+				DE361303C3F841B0F5E425D93BD95FEE /* PBXTargetDependency */,
+				15849C7C8B64E975AE67BB290777B9D9 /* PBXTargetDependency */,
+			);
+			name = "Pods-MTA";
+			productName = "Pods-MTA";
+			productReference = E78F26342F5ED3621101827C3B2BDB7E /* libPods-MTA.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		9A07BB0F2F4F1B91893B1C6FBF5370AD /* GZIP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7AF3083CB2D38E8B84BE26EFE7738D19 /* Build configuration list for PBXNativeTarget "GZIP" */;
+			buildPhases = (
+				88C78B333D06D9872DE4E55FEF866D29 /* Sources */,
+				FF9A4F96ED21E5BBBA7F62016A94CC0A /* Frameworks */,
+				3C8A9FFFFE9B9681FBD4DB5E158B1A6B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GZIP;
+			productName = GZIP;
+			productReference = BE6FB2F2F6E3FD13D2BFEE86D4E030BF /* libGZIP.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6A1BF47C5D7D726EDD10D641F451323E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23D7DA26C40DEA0CBB49A7825C7CD4F1 /* CocoaAsyncSocket */,
+				274DC44D2B42DBB44A3634CEF4C3B3CB /* GBDeviceInfo */,
+				9A07BB0F2F4F1B91893B1C6FBF5370AD /* GZIP */,
+				7325E9131F943BA25805C9AC5C03582F /* Pods-MTA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E0104DB40356C893EF3EBDC78625B17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF115F6CCE5994BAA44DDB086E841F47 /* GBDeviceInfo-dummy.m in Sources */,
+				205A60EA2658A4B90D8E59F1A38892DE /* GBDeviceInfo_Common.m in Sources */,
+				B44C45FAFE8FCBABF1DF3129A9D106E3 /* GBDeviceInfo_OSX.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52BF12F835BDA1CD2787DA3488AC6DA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1D3558E80197D62084FD585403BAFA3 /* CocoaAsyncSocket-dummy.m in Sources */,
+				D929F6E068CA507BE5C5F45C5C173FC0 /* GCDAsyncSocket.m in Sources */,
+				40042D23E3C5B09ED05246B54E09D935 /* GCDAsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BDED60A3CC6651C2CCC31F71FADCA29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8ACF85D715BB7E710420DBE160B54E4 /* Pods-MTA-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88C78B333D06D9872DE4E55FEF866D29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABC6717E8D915376E89BC88749877AF2 /* GZIP-dummy.m in Sources */,
+				305B1478BF6997FBB91CEC7CC4B66545 /* NSData+GZIP.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		15849C7C8B64E975AE67BB290777B9D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GZIP;
+			target = 9A07BB0F2F4F1B91893B1C6FBF5370AD /* GZIP */;
+			targetProxy = 6A3AADE79725D94DA5A880C9AA657C34 /* PBXContainerItemProxy */;
+		};
+		D5EE5158F7F1DE717DD3D1AD0508041C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 23D7DA26C40DEA0CBB49A7825C7CD4F1 /* CocoaAsyncSocket */;
+			targetProxy = E73C30C8954C492607D5A65F3F0B2242 /* PBXContainerItemProxy */;
+		};
+		DE361303C3F841B0F5E425D93BD95FEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GBDeviceInfo;
+			target = 274DC44D2B42DBB44A3634CEF4C3B3CB /* GBDeviceInfo */;
+			targetProxy = 203D4E39F1C6EE3F5852D1BA5DD570DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		01A0D410306B375F1577F2B707EAC78E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C2D5F742A259AC12FA8BC669BB4B8ED /* CocoaAsyncSocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		25A60B34CC89B3E8BF3FBE859CC41722 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D147AA7F03344AE67E7517BEB0C2D2FE /* Pods-MTA.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		26D9C12328B62564E75A13A69A43A431 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5186597560C9D1BEEF0ADDB79A7365BF /* GBDeviceInfo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/GBDeviceInfo/GBDeviceInfo-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		49483D145E164385B81740827B5EB085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A30B7429A70858B92D9BE4618DACEA4E /* GZIP.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/GZIP/GZIP-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		4F34B45F35493E8F7CF2DBBCC51B95FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C2D5F742A259AC12FA8BC669BB4B8ED /* CocoaAsyncSocket.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		7A580D893249EFCBDBEA83EE658FEF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		862DE52C07508C8760B0EACB92352B55 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 607EDC941E00C1A67048BA4F0A963D42 /* Pods-MTA.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		90772DA024690C41BBF0CACE5E555357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5186597560C9D1BEEF0ADDB79A7365BF /* GBDeviceInfo.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/GBDeviceInfo/GBDeviceInfo-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		C0AB86147F7D5050015A4E85436FB48B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A30B7429A70858B92D9BE4618DACEA4E /* GZIP.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/GZIP/GZIP-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		E8B0732F7D3E5BB15C212C29C806F741 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A580D893249EFCBDBEA83EE658FEF8F /* Debug */,
+				E8B0732F7D3E5BB15C212C29C806F741 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		68F1C0D9370ED14D4D3E7108D86B15C5 /* Build configuration list for PBXNativeTarget "GBDeviceInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90772DA024690C41BBF0CACE5E555357 /* Debug */,
+				26D9C12328B62564E75A13A69A43A431 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E720E377F01A6230162E58B96EA78A5 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F34B45F35493E8F7CF2DBBCC51B95FA /* Debug */,
+				01A0D410306B375F1577F2B707EAC78E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		713AD03B42F37B48FD09B58FF59E56A2 /* Build configuration list for PBXNativeTarget "Pods-MTA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25A60B34CC89B3E8BF3FBE859CC41722 /* Debug */,
+				862DE52C07508C8760B0EACB92352B55 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7AF3083CB2D38E8B84BE26EFE7738D19 /* Build configuration list for PBXNativeTarget "GZIP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0AB86147F7D5050015A4E85436FB48B /* Debug */,
+				49483D145E164385B81740827B5EB085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

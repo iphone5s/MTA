@@ -209,7 +209,13 @@ void encryptRC4(NSData *input)
     
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
     NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
-    [evDict setObject:app_Version forKey:@"av"];
+    if ([MTAConfig sharedInstance].version != nil) {
+        [evDict setObject:app_Version forKey:@"av"];
+    }else if (app_Version != nil){
+        [evDict setObject:app_Version forKey:@"av"];
+    }else{
+        [evDict setObject:@"1.0.0" forKey:@"av"];
+    }
     
     [commonDict setObject:evDict forKey:@"ev"];
     [commonDict setObject:getHardwareUUID() forKey:@"ui"];

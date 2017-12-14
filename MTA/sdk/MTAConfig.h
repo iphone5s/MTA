@@ -14,4 +14,6 @@
 
 @property (nonatomic, strong) NSString *channel;
 
+@property (nonatomic, strong) NSString *version;
+
 @end

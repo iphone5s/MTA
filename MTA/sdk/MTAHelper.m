@@ -171,7 +171,7 @@ void encryptRC4(NSData *input)
     [evDict setObject:[NSNumber numberWithInteger:2] forKey:@"os"];
     [evDict setObject:deviceInfo.rawSystemInfoString forKey:@"md"];
     [evDict setObject:@"2.1.0" forKey:@"sv"];
-    [evDict setObject:@"1512904962033368" forKey:@"sut"];
+    [evDict setObject:[NSNumber numberWithInteger:time(0) * 1000000] forKey:@"sut"];
     [evDict setObject:@{@"ss":@"SSDS",@"bs":@"ac:a3:1e:58:3b:74"} forKey:@"wf"];
     
     NSString *strScreen = [NSString stringWithFormat:@"%.0fx%.0f",deviceInfo.displayInfo.resolution.width,deviceInfo.displayInfo.resolution.height];
@@ -185,7 +185,6 @@ void encryptRC4(NSData *input)
     {
         [evDict setObject:@"appstore" forKey:@"ch"];
     }
-    
 
     [evDict setObject:@"macOS" forKey:@"pl"];
     [evDict setObject:@"iOS" forKey:@"pl"];//
@@ -231,4 +230,5 @@ void encryptRC4(NSData *input)
     
     return commonDict;
 }
+
 @end

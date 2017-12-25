@@ -16,4 +16,6 @@
 
 @property (nonatomic, strong) NSString *version;
 
+@property (nonatomic, strong) NSString *bundleId;
+
 @end

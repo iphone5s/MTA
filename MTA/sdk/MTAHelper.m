@@ -146,7 +146,12 @@ void encryptRC4(NSData *input)
     NSMutableDictionary *commonDict = [NSMutableDictionary dictionary];
     [commonDict setObject:[NSNumber numberWithInteger:2] forKey:@"et"];
     [commonDict setObject:[NSNumber numberWithInteger:934070624] forKey:@"idx"];
-    if([NSBundle mainBundle].bundleIdentifier != nil)
+    
+    if([MTAConfig sharedInstance].bundleId != nil)
+    {
+        [commonDict setObject:[MTAConfig sharedInstance].bundleId forKey:@"bdid"];
+    }
+    else if([NSBundle mainBundle].bundleIdentifier != nil)
     {
         [commonDict setObject:[NSBundle mainBundle].bundleIdentifier forKey:@"bdid"];
     }

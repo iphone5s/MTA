@@ -10,6 +10,7 @@
 #import <GZIP.h>
 #import <GBDeviceInfo.h>
 #import "MTAConfig.h"
+#import <sys/time.h>
 
 #define swap_int(_a, _b) int _t = _a; _a = _b; _b = _t;
 
@@ -176,7 +177,11 @@ void encryptRC4(NSData *input)
     [evDict setObject:[NSNumber numberWithInteger:2] forKey:@"os"];
     [evDict setObject:deviceInfo.rawSystemInfoString forKey:@"md"];
     [evDict setObject:@"2.1.0" forKey:@"sv"];
-    [evDict setObject:[NSNumber numberWithInteger:time(0) * 1000000] forKey:@"sut"];
+    
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+    NSNumber *sutNum = [NSNumber numberWithLong:tv.tv_sec * 1000000 + tv.tv_usec];
+    [evDict setObject:sutNum forKey:@"sut"];
     [evDict setObject:@{@"ss":@"SSDS",@"bs":@"ac:a3:1e:58:3b:74"} forKey:@"wf"];
     
     NSString *strScreen = [NSString stringWithFormat:@"%.0fx%.0f",deviceInfo.displayInfo.resolution.width,deviceInfo.displayInfo.resolution.height];

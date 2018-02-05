@@ -17,9 +17,10 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // Insert code here to initialize your application
+//    NSString *idfv = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
     
     [MTAConfig sharedInstance].channel = @"Navicat";
-    [MTA startWithAppkey:@"IY77EINW72CF"];
+    [MTA startWithAppkey:@"IJCZL3854VLG"];
 }
 
 

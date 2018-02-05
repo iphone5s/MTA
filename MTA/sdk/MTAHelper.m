@@ -10,7 +10,11 @@
 #import <GZIP.h>
 #import <GBDeviceInfo.h>
 #import "MTAConfig.h"
-#import <sys/time.h>
+
+#include <sys/socket.h>
+#include <sys/sysctl.h>
+#include <net/if.h>
+#include <net/if_dl.h>
 
 #define swap_int(_a, _b) int _t = _a; _a = _b; _b = _t;
 
@@ -21,6 +25,82 @@
 @property (nonatomic, strong) NSNumber *numberSI;
 
 @end
+
+NSString *macAddress()
+{
+    
+    int                    mib[6];
+    
+    size_t                len;
+    
+    char                *buf;
+    
+    unsigned char        *ptr;
+    
+    struct if_msghdr    *ifm;
+    
+    struct sockaddr_dl    *sdl;
+    
+    
+    mib[0] = CTL_NET;
+    
+    mib[1] = AF_ROUTE;
+    
+    mib[2] = 0;
+    
+    mib[3] = AF_LINK;
+    
+    mib[4] = NET_RT_IFLIST;
+    
+    
+    if ((mib[5] = if_nametoindex("en0")) == 0) {
+        
+        printf("Error: if_nametoindex error/n");
+        
+        return NULL;
+        
+    }
+    
+    
+    if (sysctl(mib, 6, NULL, &len, NULL, 0) < 0) {
+        
+        printf("Error: sysctl, take 1/n");
+        
+        return NULL;
+        
+    }
+    
+    
+    if ((buf = malloc(len)) == NULL) {
+        
+        printf("Could not allocate memory. error!/n");
+        
+        return NULL;
+        
+    }
+    
+    
+    if (sysctl(mib, 6, buf, &len, NULL, 0) < 0) {
+        
+        printf("Error: sysctl, take 2");
+        
+        return NULL;
+        
+    }
+    
+    
+    ifm = (struct if_msghdr *)buf;
+    
+    sdl = (struct sockaddr_dl *)(ifm + 1);
+    
+    ptr = (unsigned char *)LLADDR(sdl);
+    
+    NSString *outstring = [NSString stringWithFormat:@"%02x:%02x:%02x:%02x:%02x:%02x", *ptr, *(ptr+1), *(ptr+2), *(ptr+3), *(ptr+4), *(ptr+5)];
+    
+    free(buf);
+    
+    return [outstring uppercaseString];
+}
 
 NSString *getHardwareUUID()
 {
@@ -176,13 +256,13 @@ void encryptRC4(NSData *input)
     [evDict setObject:@"Asia/Shanghai" forKey:@"tz"];
     [evDict setObject:[NSNumber numberWithInteger:2] forKey:@"os"];
     [evDict setObject:deviceInfo.rawSystemInfoString forKey:@"md"];
-    [evDict setObject:@"2.1.0" forKey:@"sv"];
+    [evDict setObject:@"2.1.2" forKey:@"sv"];
     
     struct timeval tv;
     gettimeofday(&tv, NULL);
     NSNumber *sutNum = [NSNumber numberWithLong:tv.tv_sec * 1000000 + tv.tv_usec];
     [evDict setObject:sutNum forKey:@"sut"];
-    [evDict setObject:@{@"ss":@"SSDS",@"bs":@"ac:a3:1e:58:3b:74"} forKey:@"wf"];
+    [evDict setObject:@{@"ss":@"SSDS",@"bs":macAddress()} forKey:@"wf"];
     
     NSString *strScreen = [NSString stringWithFormat:@"%.0fx%.0f",deviceInfo.displayInfo.resolution.width,deviceInfo.displayInfo.resolution.height];
     [evDict setObject:strScreen forKey:@"sr"];
@@ -197,7 +277,6 @@ void encryptRC4(NSData *input)
     }
 
     [evDict setObject:@"macOS" forKey:@"pl"];
-    [evDict setObject:@"iOS" forKey:@"pl"];//
     if (deviceInfo.family == GBDeviceFamilyiMac) {
         [evDict setObject:@"iMac" forKey:@"mf"];
     }else if (deviceInfo.family == GBDeviceFamilyMacMini){
